@@ -229,4 +229,11 @@ Scrivi una funzione che accetti una stringa come argomento e la ritorni girata (
 	return (ParolaALContrario );
 }
 var parola = prompt('inserisci una parola');
-alert('la tua parola al contrario:\n' + ParolaALContrario(parola)); */
+alert('la tua parola al contrario:\n' + ParolaALContrario(parola)); 
+
+////METODO2/////
+function reverseWord(string){
+
+    return string.split("").reverse().join("");
+
+    };
