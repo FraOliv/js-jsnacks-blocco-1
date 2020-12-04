@@ -131,7 +131,7 @@ Calcola quanto pesano tutte le zucchine. */
 
 
 
-/* var Zucchine  = [
+/*  var Zucchine  = [
     {
     "varieta": "faenza",
     "lunghezza" : "25",
@@ -197,25 +197,33 @@ var pesoTot = 0;
 Zucchine.forEach((element) => {
     pesoTot += element.peso;
     console.log(element.peso)
-});
+}); */
 
 
- */
 /* 
+
+
+
+
  Scrivi una funzione che accetti una stringa come
 argomento e la ritorni girata (es. Ciao -> oaiC) */
-/* function reverseWord(stringa) {
+
+
+
+
+/* 
+ function reverseWord(stringa) {
     var reverse_word = "";
     for (var i = stringa.length - 1; i >= 0; i--) {
         reverse_word += stringa[i];
     };
     return reverse_word;
-}; */
+}; */ 
 /*
 Scrivi una funzione che accetti una stringa come argomento e la ritorni girata (es. Ciao -> oaiC)
 */
 
-/* function Invertitore(x)
+/*  function Invertitore(x)
 {
 	var ParolaALContrario ="";
 	var index=(x.length - 1);
@@ -236,4 +244,99 @@ function reverseWord(string){
 
     return string.split("").reverse().join("");
 
-    };
+    }; */
+
+    
+  
+/* 
+Crea 10 oggetti che rappresentano una zucchina.
+Dividi in due array separati le zucchine che misurano
+meno o più di 15cm.
+Infine stampa separatamente quanto pesano i due gruppi
+di zucchine */
+     var Zucchine  = [
+    {
+    "varieta": "faenza",
+    "peso" : 2,    
+    "lunghezza" : 4,
+    },
+    
+    {
+    "varieta": "faenza",
+    "lunghezza" : 25,
+    "peso" : 12,    
+    },
+    
+    {
+    "varieta": "faenza",
+    "lunghezza" : 9,
+    "peso" : 15,    
+    },
+    
+    {
+    "varieta": "faenza",
+    "lunghezza" : 13,
+    "peso" : 3,    
+    },
+    {
+    "varieta": "faenza",
+    "lunghezza" : 25,
+    "peso" : 7,    
+    },
+    
+    {
+    "varieta": "faenza",
+    "lunghezza" : 18,
+    "peso" : 12,    
+    },
+    {
+    "varieta": "faenza",
+    "lunghezza" : 25,
+    "peso" : 8,    
+    },
+    
+    {
+    "varieta": "faenza",
+    "lunghezza" : 22,
+    "peso" : 10,    
+    },
+
+
+    {
+    "varieta": "faenza",
+    "lunghezza" : 4,
+    "peso" : 24,    
+    },
+    
+    {
+    "varieta" : "faenza",
+    "lunghezza" : 25,
+    "peso" : 12,    
+    }
+
+]
+
+var zucchineLunghe = [];
+var zucchineCorte = [];
+
+Zucchine.forEach(element => { 
+    if (element.lunghezza > 15) {
+        zucchineLunghe.push(element);
+    } else {
+        zucchineCorte.push(element);
+    }
+})
+
+
+var pesoTotZucchineCorte = 0;
+var pesoTotZucchineLunghe = 0;
+zucchineCorte.forEach((element) => {
+    pesoTotZucchineCorte += element.peso;
+    console.log(element.peso)
+}); 
+
+zucchineLunghe.forEach((element) => {
+    pesoTotZucchineLunghe += element.peso;
+    console.log(element.peso)
+}); 
+
